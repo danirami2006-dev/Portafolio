@@ -4,49 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Personal</title>
-    <style>
-body {
+  <style>
+    body {
         background-color: #E6BFFF; 
         font-family: sans-serif;
         padding: 20px;
-        margin: 0;
-      }
+        margin: 0; }
 
       .portfolio-container {
-        max-width: 950px; 
-        margin: 0 auto;   
-      }
+        max-width: 1200px; 
+        margin: 0 auto;  }
+
       .banner-contenedor-fijo {
         width: 100%;
-        height: 320px; 
+      
+        position: relative;
+        height: 0;
+        padding-top: 36%; 
         
         background-image: url('PORTAFOLIO.png'); 
-        background-size: cover;      
-        background-position: center; 
-        border-radius: 16px;         
-        
-      
-        display: flex;
-        align-items: flex-end;   
-        
-        /* --- ELIGE LA ORIENTACIÓN AQUÍ --- */
-        justify-content: flex-end;    /* Alínea a la DERECHA dentro del banner */
-        /* Para cambiar a la IZQUIERDA dentro, borra la línea de arriba y usa: justify-content: flex-start; */
-
-        padding: 25px;           
-        box-sizing: border-box; }
+        background-size: contain;   
+        background-repeat: no-repeat;
+        background-position: center;  
+        border-radius: 16px;   }
 
     
+      .redes-banner {
+        position: absolute;
+        
+        bottom: 12%;    
+        right: 12%;   
+        
+        display: flex;
+        gap: 15px;  }
+
       .redes-banner a img {
-        width: 45px;        
-        height: 45px;
-        margin: 0 6px;            
+        width: 48px;        
+        height: 48px;
         object-fit: contain;
-        display: inline-block;  }
+        display: block;
+        transition: transform 0.2s ease; }
+
+      .redes-banner a img:hover {
+        transform: scale(1.15);  }
 
       h1 {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 25px;
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+        color: #333; }
+
+      section {
+        background-color: rgba(255, 255, 255, 0.4); 
+        padding: 40px;
+        border-radius: 16px;
+        margin-top: 30px;
+        font-size: 1.1rem; }
+
+      .Diseñador {
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 30px 0;
+        border-radius: 12px;
       }
     </style>
   </head>
