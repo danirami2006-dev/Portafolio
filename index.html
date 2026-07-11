@@ -9,45 +9,44 @@ body {
         background-color: #E6BFFF; 
         font-family: sans-serif;
         padding: 20px;
-        margin: 0; }
+        margin: 0;
+      }
 
       .portfolio-container {
         max-width: 950px; 
-        margin: 0 auto;  }
-      .banner-wrapper {
-        position: relative; 
+        margin: 0 auto;   
+      }
+      .banner-contenedor-fijo {
         width: 100%;
-        display: inline-block;
+        height: 320px; 
         
-      .banner-img {
-        width: 100%;        
-        height: auto;
-        display: block;
-        border-radius: 16px;  }
-
-      .redes-banner {
-        position: absolute;
-        bottom: 20px;       
-        right: 25px;       
+        background-image: url('PORTAFOLIO.png'); 
+        background-size: cover;      
+        background-position: center; 
+        border-radius: 16px;         
+        
+      
         display: flex;
-        gap: 12px;         
-        z-index: 10;       
-      }
+        align-items: flex-end;   
+        
+        /* --- ELIGE LA ORIENTACIÓN AQUÍ --- */
+        justify-content: flex-end;    /* Alínea a la DERECHA dentro del banner */
+        /* Para cambiar a la IZQUIERDA dentro, borra la línea de arriba y usa: justify-content: flex-start; */
 
-      .redes-banner img {
-        width: 42px;        
-        height: 42px;
+        padding: 25px;           
+        box-sizing: border-box; }
+
+    
+      .redes-banner a img {
+        width: 45px;        
+        height: 45px;
+        margin: 0 6px;            
         object-fit: contain;
-        transition: transform 0.2s ease;
-      }
-
-      .redes-banner img:hover {
-        transform: scale(1.1); 
-      }
+        display: inline-block;  }
 
       h1 {
         text-align: center;
-        margin-top: 15px;
+        margin-top: 20px;
       }
     </style>
   </head>
@@ -55,11 +54,8 @@ body {
 
     <div class="portfolio-container">
       
-      <header>
-        <!-- Los íconos TIENEN que estar aquí adentro, justo debajo de la imagen -->
-        <div class="banner-wrapper">
-          <img class="banner-img" src="Cuadro.png" alt="Banner Portafolio">
-          
+      <header>  
+        <div class="banner-contenedor-fijo">    
           <div class="redes-banner">
             <a href="https://www.instagram.com/aimi.eiko?igsh=dmd1cDl1cmY3anc0" target="_blank">
               <img src="instagram.png" alt="Instagram">
@@ -71,6 +67,7 @@ body {
               <img src="tiktok.png" alt="TikTok">
             </a>
           </div>
+
         </div>
 
         <h1>AIMI EIKO</h1>
