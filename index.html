@@ -5,85 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Personal</title>
     <style>
-     body {
+body {
         background-color: #E6BFFF; 
         font-family: sans-serif;
         padding: 20px;
-        margin: 0;  }     
-      
+        margin: 0;
+      }
+
+      /* Contenedor principal para centrar el diseño en pantallas de PC */
       .portfolio-container {
         max-width: 950px; 
-        margin: 0 auto;  }   
-      
+        margin: 0 auto;   
+      }
+
+      /* 1. ESTA CAJA DEBE SER RELATIVA PARA MANDAR SOBRE LOS ÍCONOS */
       .banner-wrapper {
         position: relative; 
         width: 100%;
-        margin-bottom: 20px;
+        display: inline-block; /* Ajusta la caja al tamaño exacto de la imagen */
       }
 
       .banner-img {
-        width: 100%;     
+        width: 100%;        
         height: auto;
         display: block;
-        border-radius: 16px;   }
+        border-radius: 16px; 
+      }
 
+      /* 2. POSICIONAMIENTO ABSOLUTO: Clava los íconos abajo a la derecha del banner */
       .redes-banner {
         position: absolute;
-        bottom: 25px;      
-        right: 35px;    
+        bottom: 20px;       /* Distancia desde el borde inferior del banner */
+        right: 25px;        /* Distancia desde el borde derecho del banner */
         display: flex;
-        gap: 12px;         
-        background-color: rgba(255, 255, 255, 0.1); 
-        padding: 8px;
-        border-radius: 10px;  }
+        gap: 12px;          /* Espacio entre cada ícono */
+        z-index: 10;        /* Obliga a los íconos a estar por encima de la imagen */
+      }
 
+      /* Control estricto del tamaño de los íconos */
       .redes-banner img {
-        width: 38px;        
-        height: 38px;
+        width: 42px;        
+        height: 42px;
         object-fit: contain;
-        transition: transform 0.2s ease;   }
+        transition: transform 0.2s ease;
+      }
 
       .redes-banner img:hover {
-        transform: scale(1.15);  }
+        transform: scale(1.1); 
+      }
 
       h1 {
         text-align: center;
-        margin-top: 10px;
-        font-size: 2rem;
-        letter-spacing: 2px;  }
-      section {
-        background-color: rgba(255, 255, 255, 0.4);
-        padding: 25px;
-        border-radius: 16px;
-        margin-top: 20px;}
-
-      .Diseñador {
-        max-width: 250px;
-        height: auto;
-        display: block;
-        margin: 20px 0;
-        border-radius: 12px; }
-
-      ul, ol {
-        margin-bottom: 20px; }
+        margin-top: 15px;
+      }
     </style>
   </head>
   <body>
-   <header>
-     <img class="banner-img" src="PORTAFOLIO.png" alt="Banner Portafolio">
-        <div class="redes-header">
+
+    <div class="portfolio-container">
+      
+      <header>
+        <!-- Los íconos TIENEN que estar aquí adentro, justo debajo de la imagen -->
+        <div class="banner-wrapper">
+          <img class="banner-img" src="Cuadro.png" alt="Banner Portafolio">
+          
+          <div class="redes-banner">
             <a href="https://www.instagram.com/aimi.eiko?igsh=dmd1cDl1cmY3anc0" target="_blank">
-                <img src="instagram.png" alt="Instagram">
+              <img src="instagram.png" alt="Instagram">
             </a>
-            <a href="https://www.youtube.com/@aimieiko">
-                <img src="youtube.png" alt="YouTube">
+            <a href="https://www.youtube.com/@aimieiko" target="_blank">
+              <img src="youtube.png" alt="YouTube">
             </a>
-            <a href="https://www.tiktok.com/@aimi_eiko?is_from_webapp=1&sender_device=pc" target="_blank">
-                <img src="tiktok.png" alt="TikTok">
+            <a href="https://www.tiktok.com/@aimi.eiko" target="_blank">
+              <img src="tiktok.png" alt="TikTok">
             </a>
+          </div>
         </div>
-     <h1>AIMI EIKO</h1>
-   </header>
+
+        <h1>AIMI EIKO</h1>
+      </header>
       <section>
         <h2>CONÓCEME</h2>
         <p>¡Hola! Soy Daniela (Aimi Eiko) Diseñadora Gráfica e Ilustradora.
