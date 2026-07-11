@@ -9,40 +9,31 @@ body {
         background-color: #E6BFFF; 
         font-family: sans-serif;
         padding: 20px;
-        margin: 0;
-      }
+        margin: 0; }
 
-      /* Contenedor principal para centrar el diseño en pantallas de PC */
       .portfolio-container {
         max-width: 950px; 
-        margin: 0 auto;   
-      }
-
-      /* 1. ESTA CAJA DEBE SER RELATIVA PARA MANDAR SOBRE LOS ÍCONOS */
+        margin: 0 auto;  }
       .banner-wrapper {
         position: relative; 
         width: 100%;
-        display: inline-block; /* Ajusta la caja al tamaño exacto de la imagen */
-      }
-
+        display: inline-block;
+        
       .banner-img {
         width: 100%;        
         height: auto;
         display: block;
-        border-radius: 16px; 
-      }
+        border-radius: 16px;  }
 
-      /* 2. POSICIONAMIENTO ABSOLUTO: Clava los íconos abajo a la derecha del banner */
       .redes-banner {
         position: absolute;
-        bottom: 20px;       /* Distancia desde el borde inferior del banner */
-        right: 25px;        /* Distancia desde el borde derecho del banner */
+        bottom: 20px;       
+        right: 25px;       
         display: flex;
-        gap: 12px;          /* Espacio entre cada ícono */
-        z-index: 10;        /* Obliga a los íconos a estar por encima de la imagen */
+        gap: 12px;         
+        z-index: 10;       
       }
 
-      /* Control estricto del tamaño de los íconos */
       .redes-banner img {
         width: 42px;        
         height: 42px;
