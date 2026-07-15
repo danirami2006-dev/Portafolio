@@ -66,8 +66,41 @@
         height: auto;
         display: block;
         margin: 30px 0;
-        border-radius: 12px;
-      }
+        border-radius: 12px;  }
+    .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px; 
+    border-radius: 24px; 
+    overflow: hidden; 
+    aspect-ratio: 1 / 1;   }
+
+  .carousel-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0; 
+    transition: opacity 0.8s ease-in-out; }
+
+  .slide.active {
+    opacity: 1; }
+
+  
+  .conejito-mascota {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 80px; 
+    z-index: 10; 
+    pointer-events: none;  }
     </style>
   </head>
   <body>
@@ -111,15 +144,31 @@
     <li>Japonés</li>
   
 </ol>
-        <img class="Diseñador" src="Img/diseñador.png" alt="Diseñadora">
-        <p> 
-     <p><strong>REDES SOCIALES</strong></p>
-        <ul>
-            <li><a href="https://www.instagram.com/aimi.eiko?igsh=dmd1cDl1cmY3anc0">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@aimi_eiko">TikTok</a></li>
-            <li><a href="https://www.youtube.com/@aimieiko">YouTube</a></li>
-        </ul>
-      </section>
+       
+        <div class="carousel-container">
+  <div class="carousel-slides">
     
+    <img src="Img/diseñador.png" class="slide active" alt="Diseñadora">
+    
+    <img src="Img/foto2.png" class="slide" alt="Foto con mi peluche maid">
+    <img src="Img/foto1.png" class="slide" alt="Foto con mi peluche emo">
+  </div>
+  
+  <img src="Img/bunny.png" class="conejito-mascota" alt="Mascota">
+</div>
+    
+      </section>
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const tiempoDeEspera = 5000;
+
+    function siguienteFoto() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides[currentSlide].classList.add('active'); }
+    setInterval(siguienteFoto, tiempoDeEspera);
+  </script>
   </body>
 </html>
