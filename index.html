@@ -65,24 +65,34 @@
         margin-top: 30px;  }
 
      .tarjeta-texto {
-        flex: 1.2;         
-        background: linear-gradient(135deg, #4101cb, #d241f6); 
-        padding: 40px;
-        border-radius: 24px;  
-        color: #ffffff;     }
+        flex: 1.3;           
+        background: linear-gradient(135deg, #2b0080, #8833ff); 
+        padding: 45px;             
+        border-radius: 24px;       
+        color: #ffffff;            
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    }
 
     .tarjeta-texto h2 {
-        font-size: 2.3rem;
+        font-size: 3.2rem;      
         margin-top: 0;
-        margin-bottom: 20px;
-        color: #ffffff;
-        font-weight: bold; }
+        margin-bottom: 25px;
+        color: #f2c5ff;         
+        font-weight: 800;
+        letter-spacing: 1px;  }
 
-    .tarjeta-texto p {
-        font-size: 1.15rem;
+    .tarjeta-texto p.destacado {
+        font-size: 1.4rem;         /* Letra grande y legible */
+        line-height: 1.5;
+        font-weight: 700;          
+        margin-bottom: 25px; }
+
+    .tarjeta-texto p.secundario {
+        font-size: 1.2rem;       
         line-height: 1.6;
-        margin-bottom: 15px;  }
-
+        font-weight: 500;
+        opacity: 0.95; }
     .carousel-container {
         flex: 1;             
         position: relative;
@@ -162,23 +172,13 @@
         
   <div class="tarjeta-texto">
     <h2>CONÓCEME</h2>
-    <p>¡Hola! Soy Daniela, Diseñadora Gráfica e Ilustradora.</p>
-    
-    <h3>Mis herramientas digitales</h3>
-    <ul>
-      <li>Adobe Illustrator</li>
-      <li>Adobe Photoshop</li>
-      <li>After Effects</li>
-      <li>Paint Tool SAI</li>
-      <li>Virtual Code Studio</li>
-    </ul>
-
-    <h3>Mis próximos idiomas a aprender</h3>
-    <ol>
-      <li>Inglés</li>
-      <li>Portugués</li>
-      <li>Japonés</li>
-    </ol>
+    <p class="destacado">
+      ¡Hola! Soy Daniela Diseñadora Gráfica e Ilustradora,<br>
+      Entiendo el diseño como un universo en constante evolución, no como un molde estático.
+    </p>
+    <p class="secundario">
+      Soy creativa, autónoma y una aprendiz eterna por naturaleza. Cada día busco explorar nuevas técnicas, herramientas y tendencias del diseño para transformar ideas abstractas en soluciones visuales impactantes y funcionales.
+    </p>
   </div>
 
   <!-- COLUMNA DERECHA: El carrusel de imágenes -->
