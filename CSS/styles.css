@@ -239,8 +239,9 @@ section.seccion-proceso-creativo {
     width: 100%;
 }
 
+/* Estado por defecto: Ocultar los contenedores de las etapas */
 .etapa-contenedor {
-    display: flex !important;
+    display: none !important;
     flex-direction: row !important;
     align-items: center;
     justify-content: space-between;
@@ -250,13 +251,18 @@ section.seccion-proceso-creativo {
     margin: 30px auto;
 }
 
+/* Muestra únicamente la etapa activa seleccionada mediante JS */
+.etapa-contenedor.active {
+    display: flex !important;
+}
+
 /* Columna Izquierda: Video + Marco */
 .columna-video {
     flex: 2;
     width: 100%;
 }
 
-/* Envoltorio que fuerza la proporción 16:9 (1366x768) */
+/* Envoltorio que fuerza la proporción 16:9 */
 .contenedor-video-marco {
     position: relative;
     width: 100%;
@@ -264,7 +270,7 @@ section.seccion-proceso-creativo {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0px 8px 25px rgba(108, 43, 217, 0.25);
-    background-color: #000; /* Fondo negro por si carga el video */
+    background-color: transparent;
 }
 
 /* El reproductor de vídeo */
@@ -282,12 +288,12 @@ section.seccion-proceso-creativo {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: fill;       /* Estira el marco exactamente al borde */
-    pointer-events: none;  /* Permite interactuar con el vídeo */
-    z-index: 2;            /* Pone el marco por encima del vídeo */
+    object-fit: fill;       /* Estira el marco exactamente a los bordes */
+    pointer-events: none;  /* Permite dar clic o pausar el video si fuese necesario */
+    z-index: 20;           /* Capa superior para garantizar la visibilidad del marco */
 }
 
-/* Columna Derecha: Personaje + Globo en un solo PNG */
+/* Columna Derecha: Personaje + Globo */
 .columna-personaje {
     flex: 1;
     display: flex;
@@ -327,7 +333,7 @@ section.seccion-proceso-creativo {
         height: 100px;
     }
 
-    .etapa-contenedor {
+    .etapa-contenedor.active {
         flex-direction: column !important;
     }
     
