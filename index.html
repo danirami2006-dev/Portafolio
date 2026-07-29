@@ -54,53 +54,48 @@
       </section>
       <section class="seccion-proceso-creativo">
     <div class="barra-como-trabajo">
-
         <div class="banner-titulo-trabajo"></div>
-
         <div class="contenedor-botones-etapas">
             <button class="btn-etapa btn-boceto" data-tooltip="Boceto" onclick="cambiarEtapa('boceto')" aria-label="Ver etapa Boceto"></button>
             <button class="btn-etapa btn-desarrollo" data-tooltip="Desarrollo" onclick="cambiarEtapa('desarrollo')" aria-label="Ver etapa Desarrollo"></button>
             <button class="btn-etapa btn-final" data-tooltip="Final" onclick="cambiarEtapa('final')" aria-label="Ver etapa Entrega Final"></button>
         </div>
-
     </div>
 
-    <!-- SECCIÓN ETAPA 1: BOCETO -->
+    <!-- ETAPA 1: BOCETO -->
     <div id="etapa-boceto" class="etapa-contenedor active">
-        <!-- Columna Izquierda: Video + Marco -->
         <div class="columna-video">
             <div class="contenedor-video-marco">
                 <video class="video-proceso" autoplay loop muted playsinline>
                     <source src="videos/BOCETO.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
                 </video>
                 <img src="Img/MARCO paint.png" class="marco-overlay" alt="Marco decorativo">
             </div>
         </div>
 
-        <!-- Columna Derecha: Personaje + Globo en un solo PNG -->
         <div class="columna-personaje">
-            <img src="Img/personaje-boceto.png" class="imagen-personaje" alt="Ilustración acompañante etapa Boceto">
+            <!-- Recuerda cambiar 'Img/personaje-boceto.png' por el nombre real de tu PNG cuando lo tengas listo -->
+            <img src="Img/personaje-boceto.png" class="imagen-personaje" alt="Ilustración personaje etapa boceto">
         </div>
     </div>
 
-    <!-- SECCIÓN ETAPA 2: DESARROLLO -->
+    <!-- ETAPA 2: DESARROLLO -->
     <div id="etapa-desarrollo" class="etapa-contenedor" style="display: none;">
-        <!-- Columna Izquierda: Video + Marco -->
         <div class="columna-video">
             <div class="contenedor-video-marco">
                 <video class="video-proceso" autoplay loop muted playsinline>
                     <source src="videos/desarrollo.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
                 </video>
                 <img src="Img/MARCO paint.png" class="marco-overlay" alt="Marco decorativo">
             </div>
         </div>
 
-        <!-- Columna Derecha: Personaje + Globo en un solo PNG -->
         <div class="columna-personaje">
-            <img src="Img/personaje-desarrollo.png" class="imagen-personaje" alt="Ilustración acompañante etapa Desarrollo">
+            <img src="Img/personaje-desarrollo.png" class="imagen-personaje" alt="Ilustración personaje etapa desarrollo">
         </div>
     </div>
-
 </section>
     <script>
     let currentSlide = 0;
