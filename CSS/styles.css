@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+/* ==========================================
+   1. ESTILOS GENERALES
+   ========================================== */
 body {
     background-image: url('../Img/fondoweb.png'); 
     background-size: cover;         
@@ -16,6 +19,7 @@ body {
     margin: 0 auto;
 }
 
+/* BANNER PRINCIPAL */
 .banner-contenedor-fijo {
     width: 100%;
     position: relative;
@@ -57,6 +61,9 @@ h1 {
     color: #5C00BD;
 }
 
+/* ==========================================
+   2. TARJETAS DE PRESENTACIÓN (SOBRE MÍ / CARRUSEL)
+   ========================================== */
 section {
     display: flex;
     flex-direction: row;       /* Alinea texto e imagen lado a lado */
@@ -74,8 +81,8 @@ section {
     background-size: cover;        
     background-position: center;   
     background-repeat: no-repeat;
-    padding: 45px;             
-    border-radius: 24px;       
+    padding: 45px;              
+    border-radius: 24px;        
     color: #ffffff;            
     display: flex;
     flex-direction: column;
@@ -87,7 +94,7 @@ section {
     font-size: 3.8rem;         
     margin-top: 0;
     margin-bottom: 25px;
-    color: #f2c5ff;         
+    color: #f2c5ff;          
     font-weight: 800;
     letter-spacing: 2px;
 }
@@ -104,7 +111,7 @@ section {
 }
 
 .carousel-container {
-    flex: 1;             
+    flex: 1;              
     position: relative;
     width: 100%;
     max-width: 450px; 
@@ -144,7 +151,7 @@ section {
 }
 
 /* ==========================================
-   BARRA SECCIÓN ¿CÓMO TRABAJO? (AMPLIADA)
+   3. BARRA SECCIÓN ¿CÓMO TRABAJO?
    ========================================== */
 .barra-como-trabajo {
     display: flex;
@@ -201,6 +208,7 @@ section {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
 }
 
 .btn-etapa:hover::after {
@@ -222,9 +230,82 @@ section {
 .btn-final:hover { background-image: url('../Img/finalhover.png'); }
 
 /* ==========================================
-   DISEÑO RESPONSIVO (Celulares y Tablets)
+   4. ESTRUCTURA DE PROCESO CREATIVO (VIDEOS + MARCO)
    ========================================== */
-@media (max-width: 768px) {
+
+/* Anula el 'flex-direction: row' del section general para que no rompa la maqueta */
+section.seccion-proceso-creativo {
+    display: block !important;
+    width: 100%;
+}
+
+.etapa-contenedor {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 1230px;
+    margin: 30px auto;
+}
+
+/* Columna Izquierda: Video + Marco */
+.columna-video {
+    flex: 2;
+    width: 100%;
+}
+
+/* Envoltorio que fuerza la proporción 16:9 (1366x768) */
+.contenedor-video-marco {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 8px 25px rgba(108, 43, 217, 0.25);
+    background-color: #000; /* Fondo negro por si carga el video */
+}
+
+/* El reproductor de vídeo */
+.video-proceso {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* El Marco PNG montado encima del vídeo */
+.marco-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;       /* Estira el marco exactamente al borde */
+    pointer-events: none;  /* Permite interactuar con el vídeo */
+    z-index: 2;            /* Pone el marco por encima del vídeo */
+}
+
+/* Columna Derecha: Personaje + Globo en un solo PNG */
+.columna-personaje {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-personaje {
+    width: 100%;
+    max-width: 380px;      /* Tamaño del personaje PNG */
+    height: auto;
+    object-fit: contain;
+}
+
+/* ==========================================
+   5. DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+   ========================================== */
+@media (max-width: 850px) {
     section {
         flex-direction: column; 
         align-items: center;
@@ -245,74 +326,9 @@ section {
         max-width: 480px;
         height: 100px;
     }
-}
 
-.etapa-contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    width: 100%;
-    max-width: 1230px;
-    margin: 30px auto;
-}
-
-/* Columna del Video (Ocupa la mayor parte del espacio) */
-.columna-video {
-    flex: 1.8;
-    width: 100%;
-}
-
-/* Cpturador de proporciones para el video y marco */
-.contenedor-video-marco {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Mantiene la proporción exactita de 1366x768 */
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0px 8px 25px rgba(108, 43, 217, 0.25);
-}
-
-/* El Video de Paint Tool SAI al fondo */
-.video-proceso {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* El Marco PNG montado encima del video */
-.marco-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;       /* Estira el marco exacto al borde del contenedor */
-    pointer-events: none;  /* Permite interactuar con el video sin que la imagen estorbe */
-    z-index: 2;            /* Asegura que el marco quede por encima del video */
-}
-
-/* Columna Derecha: Personaje + Globo en un solo PNG */
-.columna-personaje {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Tamaño e integración de la muñeca PNG */
-.imagen-personaje {
-    width: 100%;
-    max-width: 380px;      /* Puedes subir o bajar este valor si quieres verla más grande */
-    height: auto;
-    object-fit: contain;
-}
-
-/* Adaptación responsiva para pantallas pequeñas y celulares */
-@media (max-width: 850px) {
     .etapa-contenedor {
-        flex-direction: column;
+        flex-direction: column !important;
     }
     
     .columna-video, 
