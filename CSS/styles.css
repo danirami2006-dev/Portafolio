@@ -239,37 +239,36 @@ section.seccion-proceso-creativo {
     width: 100%;
 }
 
-/* Estado por defecto: Ocultar los contenedores de las etapas */
+/* Ocultar las etapas inactivas por defecto */
 .etapa-contenedor {
     display: none !important;
     flex-direction: row !important;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
     width: 100%;
     max-width: 1230px;
-    margin: 30px auto;
+    margin: 20px auto;
+    position: relative;
 }
 
-/* Muestra únicamente la etapa activa seleccionada mediante JS */
+/* Mostrar únicamente la etapa activa */
 .etapa-contenedor.active {
     display: flex !important;
 }
 
-/* Columna Izquierda: Video + Marco */
+/* Columna Izquierda: Video + Marco (Le damos mucho más espacio) */
 .columna-video {
-    flex: 2;
+    flex: 3.5;               /* Hace el video considerablemente más grande */
     width: 100%;
+    position: relative;
 }
 
-/* Envoltorio que fuerza la proporción 16:9 */
+/* Envoltorio principal que contiene el reproductor */
 .contenedor-video-marco {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0px 8px 25px rgba(108, 43, 217, 0.25);
+    border-radius: 12px;
     background-color: transparent;
 }
 
@@ -277,35 +276,41 @@ section.seccion-proceso-creativo {
 .video-proceso {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;     /* Muestra todo el video sin recortar la ventana de SAI */
     display: block;
+    border-radius: 12px;
 }
 
-/* El Marco PNG montado encima del vídeo */
+/* El Marco morado con destellos montado exactamente sobre el video */
 .marco-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;       /* Estira el marco exactamente a los bordes */
-    pointer-events: none;  /* Permite dar clic o pausar el video si fuese necesario */
-    z-index: 20;           /* Capa superior para garantizar la visibilidad del marco */
+    /* Ajustes para encajar justo en el lienzo de trabajo */
+    top: 10%;
+    left: 18%;
+    width: 80%;
+    height: 82%;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 10;
 }
 
-/* Columna Derecha: Personaje + Globo */
+/* Columna Derecha: Personaje montado sobre el video */
 .columna-personaje {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: -80px;      /* Hace que la muñeca se monte ligeramente encima del video */
+    z-index: 15;             /* Se asegura de que quede por encima del marco */
+    pointer-events: none;
 }
 
 .imagen-personaje {
     width: 100%;
-    max-width: 380px;      /* Tamaño del personaje PNG */
+    max-width: 340px;        /* Tamaño óptimo de la muñeca */
     height: auto;
     object-fit: contain;
+    filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.15));
 }
 
 /* ==========================================
