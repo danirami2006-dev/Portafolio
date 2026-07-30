@@ -233,7 +233,6 @@ section {
    4. ESTRUCTURA DE PROCESO CREATIVO (VIDEOS + MARCO)
    ========================================== */
 
-/* Anula el 'flex-direction: row' del section general para que no rompa la maqueta */
 section.seccion-proceso-creativo {
     display: block !important;
     width: 100%;
@@ -247,7 +246,7 @@ section.seccion-proceso-creativo {
     justify-content: center;
     width: 100%;
     max-width: 1230px;
-    margin: 20px auto;
+    margin: 30px auto;
     position: relative;
 }
 
@@ -256,14 +255,13 @@ section.seccion-proceso-creativo {
     display: flex !important;
 }
 
-/* Columna Izquierda: Video + Marco (Le damos mucho más espacio) */
+/* Columna Izquierda: Video + Marco */
 .columna-video {
-    flex: 3.5;               /* Hace el video considerablemente más grande */
+    flex: 3.5;               /* Ocupa la mayor parte de la pantalla */
     width: 100%;
-    position: relative;
 }
 
-/* Envoltorio principal que contiene el reproductor */
+/* Envoltorio principal que sostiene el video y el marco */
 .contenedor-video-marco {
     position: relative;
     width: 100%;
@@ -272,42 +270,42 @@ section.seccion-proceso-creativo {
     background-color: transparent;
 }
 
-/* El reproductor de vídeo */
+/* El reproductor de vídeo (La ventana de Paint Tool SAI completa) */
 .video-proceso {
     width: 100%;
     height: 100%;
-    object-fit: contain;     /* Muestra todo el video sin recortar la ventana de SAI */
+    object-fit: cover;
     display: block;
     border-radius: 12px;
 }
 
-/* El Marco morado con destellos montado exactamente sobre el video */
+/* El Marco PNG SOBRESALIDO alrededor de toda la ventana */
 .marco-overlay {
     position: absolute;
-    /* Ajustes para encajar justo en el lienzo de trabajo */
-    top: 10%;
-    left: 18%;
-    width: 80%;
-    height: 82%;
-    object-fit: fill;
-    pointer-events: none;
-    z-index: 10;
+    /* Los valores negativos hacen que la imagen del marco se extienda hacia AFUERA de la ventana */
+    top: -15px;
+    left: -15px;
+    width: calc(100% + 30px);   /* 100% del video + 15px por cada lado */
+    height: calc(100% + 30px);  /* 100% del video + 15px por arriba y abajo */
+    object-fit: fill;           /* Estira la imagen del marco completa */
+    pointer-events: none;      /* Permite hacer clic/interactuar con el video */
+    z-index: 20;               /* Queda montado por encima del video */
 }
 
-/* Columna Derecha: Personaje montado sobre el video */
+/* Columna Derecha: Personaje */
 .columna-personaje {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: -80px;      /* Hace que la muñeca se monte ligeramente encima del video */
-    z-index: 15;             /* Se asegura de que quede por encima del marco */
+    margin-left: -60px;        /* Hace que la muñeca se monte ligeramente sobre el borde del marco */
+    z-index: 30;               /* Queda por encima incluso del marco */
     pointer-events: none;
 }
 
 .imagen-personaje {
     width: 100%;
-    max-width: 340px;        /* Tamaño óptimo de la muñeca */
+    max-width: 340px;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.15));
