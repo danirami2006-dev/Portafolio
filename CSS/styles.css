@@ -6,21 +6,25 @@
 body {
 /* Barra de navegación superior */
 .barra-navegacion {
+    position: relative; /* O pon 'sticky' y 'top: 0' si quieres que baje contigo */
     width: 100%;
-    background: linear-gradient(90deg, #b388ff, #a076f9, #c792ea); /* Degradado morado */
-    padding: 15px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    padding: 12px 0;
+
+    /* Fondo lila translúcido para que combine con tus cintas y lunares */
+    background: rgba(187, 137, 255, 0.4); 
+    backdrop-filter: blur(8px); /* Aplica un desenfoque elegante al fondo */
     
-    /* Opcional: Para que se quede fijo arriba mientras el usuario baja */
-    position: sticky;
-    top: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(113, 0, 179, 0.15);
     z-index: 1000;
 }
 
 .nav-links {
     display: flex;
-    justify-content: flex-end; /* Alinea los links a la derecha */
-    gap: 30px;
+    justify-content: flex-end; /* Alinea texto a la derecha */
+    align-items: center;
+    gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
     padding-right: 40px;
@@ -28,11 +32,11 @@ body {
 
 .nav-links a {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #ffffff;
     text-decoration: none;
     letter-spacing: 1.5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 2px 4px rgba(60, 0, 100, 0.4);
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
