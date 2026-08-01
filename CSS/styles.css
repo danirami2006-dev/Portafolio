@@ -4,6 +4,43 @@
    1. ESTILOS GENERALES
    ========================================== */
 body {
+/* Barra de navegación superior */
+.barra-navegacion {
+    width: 100%;
+    background: linear-gradient(90deg, #b388ff, #a076f9, #c792ea); /* Degradado morado */
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    
+    /* Opcional: Para que se quede fijo arriba mientras el usuario baja */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end; /* Alinea los links a la derecha */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 40px;
+}
+
+.nav-links a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #f1bfff;
+    transform: translateY(-2px);
+}
+
     background-image: url('../Img/fondoweb.png'); 
     background-size: cover;         
     background-position: center;     
