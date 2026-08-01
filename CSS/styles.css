@@ -354,3 +354,101 @@ section.seccion-proceso-creativo {
         width: 100%;
     }
 }
+
+/* ==========================================
+   SECCIÓN DE TARJETAS CON MARCOS ILUSTRADOS
+   ========================================== */
+
+.seccion-portafolio {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+/* El contenedor individual de cada tarjeta */
+.tarjeta-contenedor {
+    position: relative;
+    width: 420px;
+    min-height: 520px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.03); /* Fondo sutil interior */
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+/* EL TRUCO: Tu marco PNG personalizado súper-impuesto */
+.marco-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Hace que el borde encaje exacto al rectángulo */
+    pointer-events: none; /* Permite hacer clic a través del marco */
+    z-index: 10; /* Queda sobre las imágenes */
+}
+
+/* Títulos de las tarjetas */
+.titulo-tarjeta {
+    font-size: 2rem;
+    color: #a855f7;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+
+/* Rejilla de las 2 miniaturas */
+.galeria-previa {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 25px;
+    z-index: 2;
+}
+
+.galeria-previa img {
+    width: 48%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.galeria-previa img:hover {
+    transform: scale(1.04);
+}
+
+/* Espacio y estilo provisional para el Botón */
+.enlace-btn {
+    z-index: 15; /* Para que quede por encima del marco y reciba el clic */
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.img-btn-vermas {
+    width: 200px; /* Ajusta este ancho si lo quieres más grande o pequeño */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Efecto al pasar el mouse por encima (hover) */
+.img-btn-vermas:hover {
+    transform: scale(1.08); /* Crece un poquito */
+    filter: drop-shadow(0px 5px 12px rgba(224, 170, 255, 0.6)); /* Brillo morado suave */
+}
+
+/* Efecto al hacer clic */
+.img-btn-vermas:active {
+    transform: scale(0.95); /* Se hunde ligeramente al presionar */
+}
