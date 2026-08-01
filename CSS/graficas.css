@@ -1,0 +1,60 @@
+/* ==========================================
+   ESTILOS EXCLUSIVOS: PIEZAS GRÁFICAS
+   ========================================== */
+
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d001a; /* Puedes usar otro tono de fondo aquí */
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Botón de regresar al inicio */
+.header-subpagina {
+    margin-bottom: 30px;
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #cc00ff, #8800cc);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-volver:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(204, 0, 255, 0.4);
+}
+
+/* Contenedor principal de la galería */
+.contenedor-galeria {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenedor-galeria h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f3c4ff;
+}
+
+/* Espacio donde irán tus afiches / piezas gráficas */
+.rejilla-piezas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
