@@ -6,20 +6,18 @@
 body {
 /* Barra de navegación superior */
 .barra-navegacion {
-    position: relative; /* O pon 'sticky' y 'top: 0' si quieres que baje contigo */
+    position: sticky; /* Hace que la barra se quede pegada cuando haces scroll */
+    top: 0;           /* Se fija justo en la parte superior de la pantalla */
+    z-index: 1000;    /* Se asegura de quedar por encima de cualquier otro elemento */
+    
     width: 100%;
     margin: 0;
     padding: 12px 0;
-
-    /* Fondo lila translúcido para que combine con tus cintas y lunares */
     background: rgba(187, 137, 255, 0.4); 
-    backdrop-filter: blur(8px); /* Aplica un desenfoque elegante al fondo */
-    
+    backdrop-filter: blur(8px);
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 15px rgba(113, 0, 179, 0.15);
-    z-index: 1000;
 }
-
 .nav-links {
     display: flex;
     justify-content: flex-end; /* Alinea texto a la derecha */
