@@ -94,7 +94,7 @@ section {
     font-size: 3.8rem;         
     margin-top: 0;
     margin-bottom: 25px;
-    color: #5034B3;          
+    color: #C68CFF;          
     font-weight: 800;
     letter-spacing: 2px;
 }
@@ -397,7 +397,7 @@ section.seccion-proceso-creativo {
 /* Títulos de las tarjetas */
 .titulo-tarjeta {
     font-size: 2rem;
-    color: #a855f7;
+    color: #5034B3;
     font-weight: 800;
     letter-spacing: 1px;
     margin-bottom: 15px;
