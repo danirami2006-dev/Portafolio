@@ -370,9 +370,9 @@ section.seccion-proceso-creativo {
 /* El contenedor individual de cada tarjeta */
 .tarjeta-contenedor {
     position: relative;
-    width: 420px;
-    min-height: 520px;
-    padding: 40px 30px;
+    width: 520px;
+    min-height: 580px;
+    padding: 45px 35px 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -407,7 +407,7 @@ section.seccion-proceso-creativo {
 /* Rejilla de las 2 miniaturas */
 .galeria-previa {
     display: flex;
-    gap: 15px;
+    gap:20px;
     justify-content: center;
     width: 100%;
     margin-bottom: 25px;
@@ -416,7 +416,7 @@ section.seccion-proceso-creativo {
 
 .galeria-previa img {
     width: 48%;
-    max-height: 250px;
+    max-height: 280px;
     object-fit: cover;
     border-radius: 18px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -436,7 +436,7 @@ section.seccion-proceso-creativo {
 }
 
 .img-btn-vermas {
-    width: 200px; /* Ajusta este ancho si lo quieres más grande o pequeño */
+    width: 260px; /* Ajusta este ancho si lo quieres más grande o pequeño */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
