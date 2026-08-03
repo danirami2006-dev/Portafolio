@@ -4,45 +4,6 @@
    1. ESTILOS GENERALES
    ========================================== */
 body {
-/* Barra de navegación superior */
-.barra-navegacion {
-    position: sticky; /* Hace que la barra se quede pegada cuando haces scroll */
-    top: 0;           /* Se fija justo en la parte superior de la pantalla */
-    z-index: 1000;    /* Se asegura de quedar por encima de cualquier otro elemento */
-    
-    width: 100%;
-    margin: 0;
-    padding: 12px 0;
-    background: rgba(187, 137, 255, 0.4); 
-    backdrop-filter: blur(8px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 15px rgba(113, 0, 179, 0.15);
-}
-.nav-links {
-    display: flex;
-    justify-content: flex-end; /* Alinea texto a la derecha */
-    align-items: center;
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-right: 40px;
-}
-
-.nav-links a {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 1.5px;
-    text-shadow: 1px 2px 4px rgba(60, 0, 100, 0.4);
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.nav-links a:hover {
-    color: #f1bfff;
-    transform: translateY(-2px);
-}
-
     background-image: url('../Img/fondoweb.png'); 
     background-size: cover;         
     background-position: center;     
