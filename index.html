@@ -152,6 +152,9 @@
     <img src="Img/vermas.png" alt="Ver más Piezas Gráficas" class="img-btn-vermas">
 </a>
     </div>
+         <button id="btn-volver-arriba" onclick="volverArriba()" aria-label="Volver arriba">
+    <img src="Img/boton.png" alt="Volver arriba">
+</button> 
 
 </section>
 <script>
@@ -190,9 +193,24 @@
             etapaSeleccionada.classList.add('active');
         }
     }
+
+const btnArriba = document.getElementById('btn-volver-arriba');
+
+window.addEventListener('scroll', () => {
+    // CONDICIONAL: Muestra el botón solo si bajaste más de 300px en la página
+    if (window.scrollY > 300) {
+        btnArriba.classList.add('visible');
+    } else {
+        btnArriba.classList.remove('visible');
+    }
+});
+
+function volverArriba() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Desplazamiento suave hacia arriba
+    });
+}
 </script>
-      <button id="btn-volver-arriba" onclick="volverArriba()" aria-label="Volver arriba">
-    <img src="Img/boton.png" alt="Volver arriba">
-</button> 
   </body>
 </html>
