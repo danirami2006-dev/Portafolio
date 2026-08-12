@@ -301,7 +301,7 @@ section.seccion-proceso-creativo {
 }
 /* Columna Derecha: Personaje */
 .columna-personaje {
-    flex: 1.5;
+    flex: 1.2;
     display: flex;
     align-items: center;
     justify-content: flex-start;
