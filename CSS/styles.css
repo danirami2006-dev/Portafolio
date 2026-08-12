@@ -305,14 +305,14 @@ section.seccion-proceso-creativo {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: -70px;        /* Hace que la muñeca se monte ligeramente sobre el borde del marco */
+    margin-left: -10px;        /* Hace que la muñeca se monte ligeramente sobre el borde del marco */
     z-index: 30;               /* Queda por encima incluso del marco */
     pointer-events: none;
 }
 
 .imagen-personaje {
     width: 100%;
-    max-width: 340px;
+    max-width: 300px;
     transform: scale(1.3);        /* <--- Agranda la imagen un 30% más de su tamaño */
     transform-origin: center right; /* Crece desde el centro hacia la derecha */
     height: auto;
