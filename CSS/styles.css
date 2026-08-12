@@ -301,11 +301,11 @@ section.seccion-proceso-creativo {
 }
 /* Columna Derecha: Personaje */
 .columna-personaje {
-    flex: 1;
+    flex: 1.5;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: -60px;        /* Hace que la muñeca se monte ligeramente sobre el borde del marco */
+    margin-left: -70px;        /* Hace que la muñeca se monte ligeramente sobre el borde del marco */
     z-index: 30;               /* Queda por encima incluso del marco */
     pointer-events: none;
 }
