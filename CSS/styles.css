@@ -301,7 +301,7 @@ section.seccion-proceso-creativo {
 }
 /* Columna Derecha: Personaje */
 .columna-personaje {
-    flex: 1.2;
+    flex: 1.3;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -312,8 +312,8 @@ section.seccion-proceso-creativo {
 
 .imagen-personaje {
     width: 100%;
-    max-width: 290px;
-    transform: scale(1.2);        /* <--- Agranda la imagen un 30% más de su tamaño */
+    max-width: 270px;
+    transform: scale(1.3);        /* <--- Agranda la imagen un 30% más de su tamaño */
     transform-origin: center right; /* Crece desde el centro hacia la derecha */
     height: auto;
     object-fit: contain;
