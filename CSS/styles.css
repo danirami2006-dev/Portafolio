@@ -238,6 +238,34 @@ section {
 .btn-final { background-image: url('../Img/finalreposo.png'); }
 .btn-final:hover { background-image: url('../Img/finalhover.png'); }
 
+
+/* ASEGURAR QUE EL PADRE SEA EL REFERENTE */
+.contenedor-marco-sai {
+    position: relative; /* Permite posicionar las etiquetas encima */
+}
+
+/* ESTILO BASE DE LAS ETIQUETAS PNG */
+.etiqueta-etapa {
+    position: absolute;
+    top: -25px;            /* Sobresale un poco hacia arriba */
+    left: 20px;            /* Ubicada en la esquina izquierda */
+    width: 180px;          /* Ajusta este valor si la quieres más grande o pequeña */
+    height: auto;
+    z-index: 25;           /* Por encima del marco y video */
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
+    transition: opacity 0.3s ease; /* Cambios suaves */
+    pointer-events: none;
+}
+
+/* CLASES DE VISIBILIDAD */
+.etapa-activa {
+    opacity: 1;
+}
+
+.etapa-oculta {
+    opacity: 0;
+}
+
 /* ==========================================
    4. ESTRUCTURA DE PROCESO CREATIVO (VIDEOS + MARCO)
    ========================================== */
