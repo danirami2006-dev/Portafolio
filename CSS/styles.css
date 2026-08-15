@@ -238,6 +238,26 @@ section {
 .btn-final { background-image: url('../Img/finalreposo.png'); }
 .btn-final:hover { background-image: url('../Img/finalhover.png'); }
 
+/* =======================================================
+   ESTILOS PARA LAS ETIQUETAS DE TÍTULO SOBRE EL MARCO
+   ======================================================= */
+
+.contenedor-video-marco {
+    position: relative; /* Permite ubicar la etiqueta superpuesta dentro del marco */
+}
+
+.etiqueta-etapa {
+    position: absolute;
+    top: -20px;          /* Ajusta para que sobresalga ligeramente por arriba */
+    left: 20px;          /* Lo ubica en la esquina superior izquierda */
+    width: 170px;        /* Ancho del título en PNG */
+    height: auto;
+    z-index: 25;         /* Garantiza que quede por encima del video y del marco overlay */
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.35)); /* Destaca sobre la imagen/video */
+    pointer-events: none;
+}
+
+
 
 /* ==========================================
    4. ESTRUCTURA DE PROCESO CREATIVO (VIDEOS + MARCO)
