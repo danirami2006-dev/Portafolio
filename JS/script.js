@@ -52,19 +52,3 @@ function volverArriba() {
     });
 }
 
-// Función ejemplo para cambiar de etapa
-function cambiarEtapa(etapa) {
-    // 1. Ocultar todas las etiquetas primero
-    document.getElementById('etiqueta-boceto').className = 'etiqueta-etapa etapa-oculta';
-    document.getElementById('etiqueta-desarrollo').className = 'etiqueta-etapa etapa-oculta';
-    document.getElementById('etiqueta-final').className = 'etiqueta-etapa etapa-oculta';
-
-    // 2. Mostrar únicamente la etiqueta según la etapa seleccionada
-    if (etapa === 'boceto') {
-        document.getElementById('etiqueta-boceto').className = 'etiqueta-etapa etapa-activa';
-    } else if (etapa === 'desarrollo') {
-        document.getElementById('etiqueta-desarrollo').className = 'etiqueta-etapa etapa-activa';
-    } else if (etapa === 'final') {
-        document.getElementById('etiqueta-final').className = 'etiqueta-etapa etapa-activa';
-    }
-}
