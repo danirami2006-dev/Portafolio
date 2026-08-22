@@ -347,8 +347,8 @@ section.seccion-proceso-creativo {
 
 .contenedor-colgado-interactivo {
     position: relative;
-    width: 270px;
-    height: 440px;
+    width: 300px;
+    height: 480px;
     display: flex;
     justify-content: center;
 }
@@ -357,9 +357,9 @@ section.seccion-proceso-creativo {
 .chinche-corazon {
     position: absolute;
     top: 5px;
-    left: 48%;
+    left: 49%;
     transform: translateX(-50%);
-    width: 70px;
+    width: 78px;
     height: auto;
     z-index: 40; /* Por encima de la muñeca y la cadena */
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
@@ -369,8 +369,8 @@ section.seccion-proceso-creativo {
 /* La Muñeca: Recibe el clic y pivota desde arriba */
 .muneca-marin-interactiva {
     position: absolute;
-    top: 25px;
-    width: 250px;
+    top: 18px;
+    width: 280px;
     height: auto;
     z-index: 35;
     cursor: pointer;
