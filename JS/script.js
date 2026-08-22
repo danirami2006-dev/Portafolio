@@ -51,4 +51,17 @@ function volverArriba() {
         behavior: 'smooth' // Desplazamiento suave hacia arriba
     });
 }
+/* ==========================================
+   4. ANIMACIÓN INTERACTIVA DE PÉNDULO (MARIN)
+   ========================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const munecaMarin = document.querySelector('.muneca-marin-interactiva');
+
+    if (munecaMarin) {
+        munecaMarin.addEventListener('click', () => {
+            // Activa o desactiva la clase que genera el movimiento de péndulo
+            munecaMarin.classList.toggle('animar-pendulo');
+        });
+    }
+});
 
