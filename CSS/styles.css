@@ -356,8 +356,8 @@ section.seccion-proceso-creativo {
 /* El Chinche: Queda por encima y sobresaliente */
 .chinche-corazon {
     position: absolute;
-    top: -8px;
-    left: 39%;
+    top: -10px;
+    left: 45%;
     transform: translateX(-50%);
     width: 78px;
     height: auto;
