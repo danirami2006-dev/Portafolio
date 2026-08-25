@@ -352,6 +352,18 @@ section.seccion-proceso-creativo {
     display: flex;
     justify-content: center;
 }
+/* Cuadro de Texto Final (Queda al fondo detrás del personaje) */
+.cuadro-texto-fondo {
+    position: absolute;
+    top: 60px;                  /* Se ubica detrás del cuerpo de la muñeca */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;               /* Ajusta el ancho según se vea mejor en la maquetación */
+    height: auto;
+    z-index: 10;                /* Por debajo de la muñeca (35) y el chinche (40) */
+    pointer-events: none;       /* No interfiere con los clics hacia la muñeca */
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.15));
+}
 
 /* El Chinche: Queda por encima y sobresaliente */
 .chinche-corazon {
