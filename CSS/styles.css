@@ -356,7 +356,7 @@ section.seccion-proceso-creativo {
 .cuadro-texto-fondo {
     position: absolute;
     top: 60px;                  /* Se ubica detrás del cuerpo de la muñeca */
-    left: 50%;
+    left: 20%;
     transform: translateX(-50%);
     width: 220px;               /* Ajusta el ancho según se vea mejor en la maquetación */
     height: auto;
