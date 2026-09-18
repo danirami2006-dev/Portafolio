@@ -31,20 +31,20 @@ body {
 .header-subpagina {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 /* Botón de regresar al inicio conservando tus estilos */
 .btn-volver {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 20px;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Tamaño equilibrado */
+    font-size: 0.9rem;
     background: linear-gradient(135deg, #a100ff, #7100b3);
     color: white;
     text-decoration: none;
@@ -55,23 +55,23 @@ body {
 }
 
 .btn-volver:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0px 5px 15px rgba(161, 0, 255, 0.4);
 }
 
 /* Estilos para el nuevo banner de ilustraciones */
 .contenedor-banner {
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1400px; /* Aumentamos el límite para que se vea imponente */
     display: flex;
     justify-content: center;
+    padding: 0 10px;
 }
 
 .img-banner-art {
     width: 100%;
     height: auto;
-    max-width: 950px;
+    max-width: 1350px; /* Tamaño amplio acorde al diseño de Paint Tool SAI */
     object-fit: contain;
     filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.3));
 }
