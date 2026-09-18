@@ -40,10 +40,9 @@ body {
 /* Botón de regresar al inicio conservando tus estilos */
 .btn-volver {
     position: absolute;
-    top: 15px;
+    top: 20px;
     left: 20px;
-    display: inline-block;
-    padding: 8px 16px; /* Tamaño equilibrado */
+    padding: 8px 16px;
     font-size: 0.9rem;
     background: linear-gradient(135deg, #a100ff, #7100b3);
     color: white;
