@@ -11,12 +11,14 @@
 
 body {
     background-image: url('../Img/fondoweb.png'); 
-    background-size: cover;         
+    background-size: cover;          
     background-position: center;     
-    background-attachment: fixed;   
-    background-repeat: no-repeat;   
-    font-family: sans-serif;
-    padding: 40px; 
+    background-attachment: fixed;    
+    background-repeat: no-repeat;    
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
     margin: 0;
 }
 
@@ -24,19 +26,23 @@ body {
     max-width: 1230px; 
     margin: 0 auto;
 }
-    font-family: 'Poppins', sans-serif; /* O la fuente que estés usando */
-    background-color: #1a0022; /* Cambia este color o pon tu imagen de fondo */
-    color: #ffffff;
-    min-height: 100vh;
-    padding: 20px;
-}
 
-/* Botón de regresar al inicio */
+/* Header principal con posición relativa para ubicar el botón */
 .header-subpagina {
-    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Botón de regresar al inicio conservando tus estilos */
 .btn-volver {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     display: inline-block;
     padding: 10px 20px;
     background: linear-gradient(135deg, #a100ff, #7100b3);
@@ -45,11 +51,29 @@ body {
     border-radius: 20px;
     font-weight: bold;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 10;
 }
 
 .btn-volver:hover {
     transform: translateY(-3px);
     box-shadow: 0px 5px 15px rgba(161, 0, 255, 0.4);
+}
+
+/* Estilos para el nuevo banner de ilustraciones */
+.contenedor-banner {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.img-banner-art {
+    width: 100%;
+    height: auto;
+    max-width: 950px;
+    object-fit: contain;
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.3));
 }
 
 /* Contenedor principal de la galería */
@@ -59,13 +83,7 @@ body {
     text-align: center;
 }
 
-.contenedor-galeria h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #e0aaff; /* Título morado claro */
-}
-
-/* Espacio donde irán tus ilustraciones más adelante */
+/* Rejilla para las ilustraciones */
 .rejilla-ilustraciones {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
