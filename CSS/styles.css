@@ -400,10 +400,10 @@ section.seccion-proceso-creativo {
 
 @keyframes balanceoPendulo {
     0% {
-        transform: rotate(-10deg);
+        transform: translateX(-50%) rotate(-10deg);
     }
     100% {
-        transform: rotate(10deg);
+        transform: translateX(-50%) rotate(10deg);
     }
 }
 /* ==========================================
