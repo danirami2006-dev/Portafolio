@@ -20,5 +20,48 @@
         </div>
     </header>
 
+    <!-- Sección de la Galería -->
+<section class="seccion-galeria">
+    <div class="grid-galeria">
+
+        <!-- Tarjeta 1 -->
+        <div class="tarjeta-arte" onclick="abrirModal('Img/ilustracion/GYARU PROJECT.png')">
+            <div class="contenedor-imagen">
+                <img src="Img/ilustracion/GYARU PROJECT.png" alt="Ilustración 1" class="img-ilustracion">
+                <img src="Img/marcodraw.png" alt="Marco" class="img-marco">
+            </div>
+            <!-- PON AQUÍ EL NOMBRE DE LA ILUSTRACIÓN 1 -->
+            <p class="titulo-ilustracion">Gyaru style 1</p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="tarjeta-arte" onclick="abrirModal('Img/ilustracion/vograce.png')">
+            <div class="contenedor-imagen">
+                <img src="Img/ilustracion/vograce.png" alt="Ilustración 2" class="img-ilustracion">
+                <img src="Img/marcodraw.png" alt="Marco" class="img-marco">
+            </div>
+            <!-- PON AQUÍ EL NOMBRE DE LA ILUSTRACIÓN 2 -->
+            <p class="titulo-ilustracion">Dibujo VOGRACE Concurso 2</p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="tarjeta-arte" onclick="abrirModal('Img/ilustracion/MARCELINElgbt.jpg')">
+            <div class="contenedor-imagen">
+                <img src="Img/ilustracion/MARCELINElgbt.jpg" alt="Ilustración 3" class="img-ilustracion">
+                <img src="Img/marcodraw.png" alt="Marco" class="img-marco">
+            </div>
+            <!-- PON AQUÍ EL NOMBRE DE LA ILUSTRACIÓN 3 -->
+            <p class="titulo-ilustracion"> Marceline la reina vampiro</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal para ver la imagen a pantalla completa -->
+<div id="modal-visor" class="modal-visor" onclick="cerrarModal()">
+    <span class="btn-cerrar-modal">&times;</span>
+    <img class="imagen-modal-contenido" id="img-modal-ampliada">
+</div>
+
 </body>
 </html>
