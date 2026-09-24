@@ -176,24 +176,26 @@
 </section>
 
       <section class="seccion-miraculous">
-    <!-- Tarjeta Informativa con Slider -->
+    <!-- 1. Visor de la Ilustración con Marco (A la izquierda) -->
+    <div class="tarjeta-arte" onclick="abrirModalIlustracion()">
+        <div class="contenedor-imagen">
+            <!-- Dibujo de fondo -->
+            <img id="ilustracion-miraculous" src="Img/adrinette.png" alt="Miraculous" class="img-ilustracion">
+            <!-- Marco encimado -->
+            <img src="Img/marcodibujo.png" alt="Marco Miraculous" class="img-marco">
+        </div>
+        <p class="titulo-ilustracion" id="titulo-miraculous">Marinette & Adrien</p>
+    </div>
+
+    <!-- 2. Tarjeta Informativa con Slider (A la derecha) -->
     <div class="tarjeta-info">
         <img src="Img/mira.png" alt="Instrucciones Miraculous" class="img-mira-base">
         
-        <!-- Contenedor del Slider interactivo -->
+        <!-- Slider dentro de la tarjeta -->
         <div class="contenedor-slider">
             <img src="Img/slid2.png" id="pista-slider" alt="Pista slider" class="img-pista-slid">
             <img src="Img/boton2.png" id="boton-ladybug" alt="Botón Ladybug" class="img-boton-ladybug">
         </div>
-    </div>
-
-    <!-- Visor de la Ilustración (Con Marco y Hover) -->
-    <div class="tarjeta-arte" onclick="abrirModalIlustracion()">
-        <div class="contenedor-imagen">
-            <img id="ilustracion-miraculous" src="Img/adrinette.png" alt="Miraculous" class="img-ilustracion">
-            <img src="Img/marcodibujo.png" alt="Marco Miraculous" class="img-marco">
-        </div>
-        <p class="titulo-ilustracion" id="titulo-miraculous">Marinette & Adrien</p>
     </div>
 </section>
       
