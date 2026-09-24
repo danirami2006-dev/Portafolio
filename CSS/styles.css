@@ -586,7 +586,7 @@ section.seccion-proceso-creativo {
     align-items: center;
     gap: 40px;
     padding: 40px 20px;
-    flex-wrap: wrap; /* Para dispositivos móviles */
+    flex-wrap: wrap; /* Para ajustarse en pantallas pequeñas o celulares */
 }
 
 /* Tarjeta Informativa */
@@ -611,6 +611,7 @@ section.seccion-proceso-creativo {
     height: 55px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .img-pista-slid {
@@ -628,4 +629,3 @@ section.seccion-proceso-creativo {
     transition: left 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     user-select: none;
 }
-
