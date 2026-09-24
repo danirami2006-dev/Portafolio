@@ -604,7 +604,7 @@ section.seccion-proceso-creativo {
     position: relative;
     width: 100%;
     border-radius: 12px;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -620,9 +620,9 @@ section.seccion-proceso-creativo {
 
 .img-marco {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: -2%;
+    left: -2%;
+    width: 104%;
     height: 100%;
     pointer-events: none;
     object-fit: fill;
@@ -657,9 +657,9 @@ section.seccion-proceso-creativo {
 /* Contenedor del Slider (ubicado sobre la barra morada) */
 .contenedor-slider {
     position: absolute;
-    bottom: 45px;
-    width: 300px;
-    height: 70px;
+    bottom: 55px;
+    width: 320px;
+    height: 80px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -674,11 +674,11 @@ section.seccion-proceso-creativo {
 /* Botón alineado centrado verticalmente */
 .img-boton-ladybug {
     position: absolute;
-    left: 20px; /* Ajustado para que encaje perfectamente dentro del slider */
+    left: 18px; /* Ajustado para que encaje perfectamente dentro del slider */
     top: 50%;
     transform: translateY(-50%); /* Centrado vertical perfecto */
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
     transition: left 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     user-select: none;
