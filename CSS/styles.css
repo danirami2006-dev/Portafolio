@@ -580,19 +580,75 @@ section.seccion-proceso-creativo {
 
 /* Layout Principal para Miraculous */
 
+/* Layout Principal para la Sección Miraculous */
 .seccion-miraculous {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    padding: 40px 20px;
-    flex-wrap: wrap; /* Para ajustarse en pantallas pequeñas o celulares */
+    gap: 40px; /* Espacio horizontal entre la imagen y la tarjeta */
+    padding: 50px 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Tarjeta Informativa */
+/* --- BLOQUE IZQUIERDO: ILUSTRACIÓN CON MARCO --- */
+.tarjeta-arte {
+    width: 500px; /* Ancho fijo para controlar el tamaño del dibujo */
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Contenedor que encierra dibujo y marco juntos */
+.contenedor-imagen {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen del Dibujo */
+.img-ilustracion {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Marco (se superpone perfectamente usando position: absolute) */
+.img-marco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite hacer clic a través del marco */
+    object-fit: fill;
+    z-index: 2;
+}
+
+/* Texto del título debajo del marco */
+.titulo-ilustracion {
+    margin-top: 10px;
+    font-family: inherit;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* --- BLOQUE DERECHO: TARJETA DEL SLIDER --- */
 .tarjeta-info {
     position: relative;
-    width: 320px;
+    width: 320px; /* Ancho proporcional a la tarjeta */
+    max-width: 90vw;
     display: flex;
     justify-content: center;
 }
@@ -603,10 +659,10 @@ section.seccion-proceso-creativo {
     display: block;
 }
 
-/* Pista y Botón del Slider */
+/* Contenedor del Slider (ubicado en la parte inferior de la tarjeta) */
 .contenedor-slider {
     position: absolute;
-    bottom: 35px;
+    bottom: 30px;
     width: 230px;
     height: 55px;
     display: flex;
@@ -628,4 +684,5 @@ section.seccion-proceso-creativo {
     cursor: pointer;
     transition: left 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     user-select: none;
+    z-index: 3;
 }
