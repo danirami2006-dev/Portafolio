@@ -104,7 +104,7 @@ function alternarVersionMiraculous() {
         // Cambia a Versión Héroes
         if (boton) {
             boton.src = sliderVersion2.boton;
-            boton.style.left = '72%'; // Posición derecha centrada dentro del slider
+            boton.style.left = '66%'; // Posición derecha centrada dentro del slider
         }
         if (pista) pista.src = sliderVersion2.pista;
         if (imgIlustracion) imgIlustracion.src = sliderVersion2.ilustracion;
