@@ -104,7 +104,7 @@ function alternarVersionMiraculous() {
         // Cambia a Versión Héroes
         if (boton) {
             boton.src = sliderVersion2.boton;
-            boton.style.left = '250px'; // Posición derecha centrada dentro del slider
+            boton.style.left = '72%'; // Posición derecha centrada dentro del slider
         }
         if (pista) pista.src = sliderVersion2.pista;
         if (imgIlustracion) imgIlustracion.src = sliderVersion2.ilustracion;
@@ -115,7 +115,7 @@ function alternarVersionMiraculous() {
         // Cambia a Versión Normal
         if (boton) {
             boton.src = sliderVersion1.boton;
-            boton.style.left = '18px'; // Posición izquierda centrada dentro del slider
+            boton.style.left = '4%'; // Posición izquierda centrada dentro del slider
         }
         if (pista) pista.src = sliderVersion1.pista;
         if (imgIlustracion) imgIlustracion.src = sliderVersion1.ilustracion;
