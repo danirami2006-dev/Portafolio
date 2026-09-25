@@ -630,12 +630,18 @@ section.seccion-proceso-creativo {
 }
 
 .titulo-ilustracion {
+    display: inline-block;
     margin-top: 14px;
-    font-family: inherit;
+    padding: 8px 22px; /* Espaciado interno para que respire el texto */
+    background: linear-gradient(135deg, #7b2cbf, #5a189a); /* Tono morado idéntico al botón */
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.3rem; /* Texto más legible */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    font-size: 1.1rem;
+    border-radius: 50px; /* Bordes completamente redondeados en forma de píldora */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra suave para darle relieve */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 
