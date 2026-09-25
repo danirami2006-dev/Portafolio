@@ -620,10 +620,10 @@ section.seccion-proceso-creativo {
 
 .img-marco {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
     pointer-events: none;
     object-fit: fill;
     z-index: 2;
